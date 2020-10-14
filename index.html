@@ -58,17 +58,38 @@
 			input[type=submit]:hover {
 			  background-color: #333133;
 			}
+			#infocard {
+    		  	  background-color: #ff9;
+    		  	  box-shadow: 0 5px 5px 0 rgba(0,0,0,.15);
+    		  	  padding: 1rem 0;
+    		  	  transform-origin: 50% 50%;
+    		  	  margin-top: 30px;
+    		  	  margin-left: 50px;
+			}
+			#name {
+    		  	  margin-left: 50px;
+			}
+			#description {
+    		  	  margin-left: 50px;
+			}
+			#contact {
+    		  	  font-size: 1.7em;
+    		  	  margin-bottom: 20px;
+			}
+			#form {
+    		  	  font-size: 0.5em;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="media mt-5">
-				<img src="diego_alvarado.png" class="m-3" alt="image" width="100px" height="85x">
-				<div class="media-body m-2">
-					<h4 class="align-items-center mt-2">Diego Alvarado</h4>
+				<img src="diego_alvarado.png" class="m-3" alt="image" width="200px" height="175x">
+				<div id="infocard" class="media-body m-2">
+					<h1 id="name" class="align-items-center mt-2">Diego Alvarado</h1>
 					<p>Entrepreneur, Product Manager, Program Management, Operation Advisor, Mentor and Coach.
 					<br>
-					Worked in the Telecom Industry. Founded 4 startups being the last one Team Coaches an innovation suite that instregrates collaboration, operation, community, and portfolio management all-in-one.
+					Worked in the Telecom Industry. Founded 4 startups being the last one Team Coaches an innovation suite that integrates collaboration, operation, community, and portfolio management all-in-one.
 					</p>
 				</div>
 			</div>
@@ -85,8 +106,8 @@
 			<hr>
 			<br>
 			<div class="container">
-				<h3>Contact Form</h3>
-				<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScV0mPFQdT51CW8bdWCKeudQ4qAR-X7lIdrrakaux7BGRYdgw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+				<h2 id="contact">Contact Form</h2>
+				<form id="form" name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScV0mPFQdT51CW8bdWCKeudQ4qAR-X7lIdrrakaux7BGRYdgw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
 	  				Name:<br>
 	  				<input type="text" name="entry.1271316456" id="entry.1271316456"><br>
 	  				Email:<br>

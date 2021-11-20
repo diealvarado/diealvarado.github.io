@@ -1,0 +1,62 @@
+<div class="left-bar">
+  {% if page.series_title %}
+    <h5><strong>{{ page.series_title }}</strong></h5><hr>
+  {% endif %}
+  <h5><strong>{{}}</strong></h5>
+{% for post in site.posts %}
+  {% if post.series_unique_code == page.series_unique_code %}
+      {% if post.url == page.url %}
+        <a href="{{site.baseurl}}{{ post.url }}"
+        style="padding: 2px 13px;
+         color: white; background: #4CAF50;
+         border-radius: 50px;">
+          {% if post.series_page_title %}
+            {{ post.series_page_title }}
+          {% else %}
+            {{ post.title }}
+          {% endif %}
+        </a><br>
+      {% else %}
+        <a href="{{site.baseurl}}{{ post.url }}">
+          {% if post.series_page_title %}
+            {{ post.series_page_title }}
+          {% else %}
+            {{ post.title }}
+          {% endif %}
+        </a><br>
+      {% endif %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<style>
+  .left-bar {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  @media (min-width: 1388px) {
+    .left-bar {
+      visibility: visible;
+      position: absolute;
+      top: 5%;
+      width: 22%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0px;
+      font-size: 14.5px;
+      margin-top: 2em;
+      border: 1px solid #ccc;
+      border-radius: 0.5em;
+      height: auto;
+      padding: 0.5em;
+      margin-left: 0.5em;
+      text-align: center;
+    }
+
+    .left-bar a {
+      text-decoration: none;
+    }
+  }
+</style>
